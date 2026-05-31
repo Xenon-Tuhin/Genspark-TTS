@@ -85,7 +85,7 @@ function buildTTSRequest(config) {
     speaker2Name,
     speaker2Voice,
     directorNotes,
-    model = 'gemini-2.5-flash-preview-tts'
+    model = 'gemini-3.1-flash-tts-preview'
   } = config;
 
   // Build the multi-turn dialogue text with emotional instructions
@@ -156,7 +156,7 @@ function buildTTSRequest(config) {
  * @returns {Promise<{ audioData: Uint8Array, mimeType: string }>}
  */
 async function callGeminiTTS(requestBody, apiKey, onProgress) {
-  const model = requestBody.model || 'gemini-2.5-flash-preview-tts';
+  const model = requestBody.model || 'gemini-3.1-flash-tts-preview';
   const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
   onProgress && onProgress(10, 'Connecting to Gemini TTS...');

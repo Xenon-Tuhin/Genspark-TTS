@@ -7,7 +7,7 @@ An AI-powered podcast TTS generator using **Google Gemini TTS API**. Input a mul
 ## ✅ Completed Features
 
 ### Core Functionality
-- **Multi-Speaker TTS** via Gemini 2.5 Flash TTS and 2.5 Pro TTS models
+- **Multi-Speaker TTS** via Gemini 3.1 Flash TTS and 3.1 Pro TTS models
 - **Two preconfigured speakers**: Xenon (Fenrir voice — male, energetic) & Silica (Leda voice — female, giggly)
 - **Expression tag system** — `(laughing)`, `(excited)`, `(whispering)`, `(sad)`, `(sarcastic)`, `(curious)`, `(energetic)`, `(playful)`, `(dramatic)` and more get converted to emotional instructions
 - **Director's Notes** — extra context/style instructions passed to the TTS model
@@ -84,8 +84,8 @@ README.md
 
 - **Endpoint**: `POST https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent`
 - **Model options**:
-  - `gemini-2.5-flash-preview-tts` (default, faster)
-  - `gemini-2.5-pro-preview-tts` (higher quality)
+  - `gemini-3.1-flash-tts-preview` (default, faster)
+  - `gemini-3.1-pro-tts-preview` (higher quality)
 - **Key**: Stored in `localStorage` under `gemini_api_key`
 - **Audio format**: `audio/pcm` or `audio/wav` (auto-converted to WAV for playback)
 
